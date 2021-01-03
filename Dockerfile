@@ -2,6 +2,8 @@ ARG FIVEM_NUM=3184
 ARG FIVEM_VER=3184-6123f9196eb8cd2a987a1dd7ff7b36907a787962
 ARG DATA_VER=7cbf60059347751065c378c577eac0cd78b32e26
 
+# Credit to Spritsail <https://github.com/spritsail> for the original image
+
 FROM alpine as builder
 
 ARG FIVEM_VER
