@@ -2,7 +2,7 @@ ARG FIVEM_NUM=3184
 ARG FIVEM_VER=3184-6123f9196eb8cd2a987a1dd7ff7b36907a787962
 ARG DATA_VER=7cbf60059347751065c378c577eac0cd78b32e26
 
-FROM spritsail/alpine:3.10 as builder
+FROM alpine as builder
 
 ARG FIVEM_VER
 ARG DATA_VER
@@ -32,14 +32,14 @@ ARG FIVEM_VER
 ARG FIVEM_NUM
 ARG DATA_VER
 
-LABEL maintainer="Spritsail <fivem@spritsail.io>" \
-      org.label-schema.vendor="Spritsail" \
+LABEL maintainer="Andruida <andruida@andruida.hu>" \
+      org.label-schema.vendor="Andruida" \
       org.label-schema.name="FiveM" \
       org.label-schema.url="https://fivem.net" \
       org.label-schema.description="FiveM is a modification for Grand Theft Auto V enabling you to play multiplayer on customized dedicated servers." \
       org.label-schema.version=${FIVEM_NUM} \
-      io.spritsail.version.fivem=${FIVEM_VER} \
-      io.spritsail.version.fivem_data=${DATA_VER}
+      hu.andruida.version.fivem=${FIVEM_VER} \
+      hu.andruida.version.fivem_data=${DATA_VER}
 
 COPY --from=builder /output/ /
 
